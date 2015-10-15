@@ -1,4 +1,7 @@
 # Mercurial plugin
+
+extracted from oh-my-zsh, this is the original README
+
 ### Usage
 Update .zshrc:
 
