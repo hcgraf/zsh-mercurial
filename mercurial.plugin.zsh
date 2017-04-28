@@ -26,10 +26,12 @@ function in_hg() {
 }
 
 function hg_get_branch_name() {
-  if [[ -f .hg/bookmarks.current ]]; then
-    echo $(hg branch):$(cat .hg/bookmarks.current)
-  else
-    echo $(hg branch)
+  if [ $(in_hg) ]; then
+    if [[ -f .hg/bookmarks.current ]]; then
+      echo $(hg branch):$(cat .hg/bookmarks.current)
+    else
+      echo $(hg branch)
+    fi
   fi
 }
 
